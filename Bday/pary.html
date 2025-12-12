@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY BIG 18🔥🔥</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-rosa-titulo: #E8B4B8;
+            --color-rosa-fondo: #FDF5F5;
+            --color-dorado: #D4AF37;
+            --color-texto: #8B7355;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 60px;
+            background-color: var(--color-rosa-fondo);
+            color: var(--color-texto);
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23F5E6E8' fill-rule='evenodd'%3E%3Ccircle cx='50' cy='50' r='10' fill='none' stroke='%23E8B4B8' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 100px 100px;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0; right: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-bottom: 2px solid var(--color-dorado);
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px 20px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--color-texto);
+            padding: 8px 15px;
+            font-size: 14px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-menu a.active { 
+            background-color: var(--color-dorado);
+            color: white; 
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 55px;
+            color: var(--color-rosa-titulo);
+        }
+
+        .subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 25px;
+            color: var(--color-texto);
+        }
+
+        .card {
+            background: white;
+            border: 2px solid var(--color-dorado);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(212,175,55,0.15);
+        }
+
+        .profile-photo-frame {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, var(--color-dorado), #F4E5C3);
+            padding: 5px;
+            border-radius: 10px;
+            margin: 0 auto 20px;
+        }
+
+        .profile-photo-inner {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--color-rosa-titulo);
+            font-size: 50px;
+        }
+
+        .festive-button {
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            background: var(--color-rosa-titulo);
+            color: white;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .festive-button:hover {
+            background: #d69ba2;
+            transform: scale(1.05);
+        }
+
+        .gold-variant {
+            background: var(--color-dorado);
+            color: #8B7355;
+        }
+
+        /* Wishlist grid */
+        .wishlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .wish-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .wish-item-title {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .rsvp-form input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--color-dorado);
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+
+    <style>
+    .profile-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px; /* mismo borde que antes */
+        display: block;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="header">
+        <div class="nav-menu">
+            <a href="#" data-page="home-page" class="active">Home</a>
+            <a href="#" data-page="rsvp-page">RSVP</a>
+            <a href="#" data-page="gifts-page">Regalos</a>
+            <a href="#" data-page="donations-page">Donaciones</a>
+            <a href="#" data-page="contact-page">Contacto</a>
+        </div>
+    </header>
+
+    <!-- HOME -->
+    <div class="container" id="home-page" style="display:block;">
+        <div class="profile-photo-frame">
+            <div class="profile-photo-inner">
+        <img src="https://i.pinimg.com/736x/6d/b2/de/6db2deecb7fd4d8bb2d1680da9d72010.jpg" alt="Foto" class="profile-img">
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="title">¡Celebremos mi Cumpleaños!</h1>
+        <p class="subtitle">31/3/26</p>
+
+        <div class="card">
+            Ojalá puedas venir a celebrar conmigo 🎉💗
+        </div>
+
+        <button class="festive-button" data-page="rsvp-page">
+            Confirmar asistencia
+        </button>
+    </div>
+
+    <!-- RSVP PAGE (EmailJS) -->
+    <div class="container" id="rsvp-page">
+        <h1 class="title">¡Confirma tu Asistencia!</h1>
+        <p class="subtitle">Completá tus datos</p>
+
+        <div class="card">
+            <form id="rsvpForm" class="rsvp-form">
+                <input type="text" id="rsvp-name" placeholder="Nombre completo" required>
+                <input type="email" id="rsvp-email" placeholder="Correo electrónico" required>
+
+                <button type="submit" class="festive-button">
+                    Enviar Confirmación
+                </button>
+            </form>
+
+            <p id="rsvp-success" style="display:none; color:green; margin-top:10px; font-weight:bold;">
+                ¡Gracias! Tu confirmación fue enviada ❤️
+            </p>
+        </div>
+    </div>
+
+    <!-- GIFTS PAGE -->
+    <div class="container" id="gifts-page">
+        <h1 class="title">Regalos y Deseos</h1>
+
+        <div class="card">
+            <p>Si querés hacerme un regalo, acá te dejo algunas ideas 💗</p>
+            
+            <div class="wishlist-grid">
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_950068-MLA95940198897_102025-F.webp">
+                    <a href="https://www.mercadolibre.com.ar/ferrero-rocher-caja-x-8un-100g/p/MLA20028585?pdp_filters=shipping%3Afulfillment%7Cdeal%3AMLA1024566-1#polycard_client=search-nordic&search_layout=grid&position=6&type=product&tracking_id=9ce4094f-7e0a-48ef-9049-8f9f6126d1bf&wid=MLA1387026309&sid=search" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_633958-MLA99441383612_112025-F.webp">
+                    <a href="https://www.mercadolibre.com.ar/chocolate-con-leche-kinder-maxi-caja-x-10un/p/MLA19997618?pdp_filters=shipping%3Afulfillment%7Cdeal%3AMLA1024566-1#polycard_client=search-nordic&search_layout=grid&position=7&type=product&tracking_id=9ce4094f-7e0a-48ef-9049-8f9f6126d1bf&wid=MLA1370197030&sid=search" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="wishlist-grid">
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_995837-MLA80124794876_112024-F.webp">
+                    <a href="https://www.mercadolibre.com.ar/fideos-cup-noodles-nissin-sabor-queso-cheddar-69-gr-x2/up/MLAU238976147?pdp_filters=item_id:MLA1348126721#is_advertising=true&searchVariation=MLAU238976147&backend_model=search-backend&position=11&search_layout=stack&type=pad&tracking_id=11fb18b2-2a56-407a-ab62-c8ab1fcf328b&ad_domain=VQCATCORE_LST&ad_position=11&ad_click_id=MDRiMmVjZGMtOGY2ZS00NTBjLWEwYzktNGExZjA0YThkMjdi" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_630438-MLA96613023435_102025-F.webp">
+                    <a href="https://articulo.mercadolibre.com.ar/MLA-1401650926-sunchang-gochujang-pasta-aji-picante-coreano-500g-_JM#polycard_client=search-nordic&search_layout=stack&position=3&type=item&tracking_id=1ec24b7e-b1cc-4185-9c9c-efb3901bb501&wid=MLA1401650926&sid=search" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="wishlist-grid">
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_711652-MLA84932254279_052025-F.webp">
+                    <a href="https://www.mercadolibre.com.ar/tteokbokki--ramen-sabor-queso-145-gr-rapokki/up/MLAU3187435578#polycard_client=recommendations_vip-v2p&reco_backend=recomm-platform_rars-vpp-v2p-supermarket_supermarket&reco_model=ranker_entity_v2_retrieval_system_vpp_v2p&reco_client=vip-v2p&reco_item_pos=1&reco_backend_type=low_level&reco_id=b593689b-5462-4157-a5e3-c6c53ca449fd&wid=MLA2087279868&sid=recos" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_854235-MLA85366278661_052025-F.webp">
+                    <a href="https://www.mercadolibre.com.ar/tteokbokki-sabor-queso-120-gr-topokki-corea/up/MLAU3210720052#polycard_client=search-nordic&search_layout=stack&position=4&type=product&tracking_id=11fb18b2-2a56-407a-ab62-c8ab1fcf328b&wid=MLA1501187783&sid=search" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="wishlist-grid">
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_912603-MLA91828464855_092025-F.webp">
+                    <a href="https://articulo.mercadolibre.com.ar/MLA-922996421-maruchan-fideos-instantaneos-cup-importados-usa-_JM?attributes=Sabores_vpp%3AUXVlc28%3D&picker=true&searchVariation=184117311683&quantity=1" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_961388-MLA94006217961_102025-F.webp">
+                    <a href="https://www.mercadolibre.com.ar/tira-de-luz-led-5050-rgb-usb-5mts-tv-gamer-pc/up/MLAU3424009920#polycard_client=recommendations_vip-pads-up&reco_backend=recomm_platform_base_pads_rfa_marketplace&wid=MLA1533620995&reco_model=rk_ent_v2_retsys_ads&reco_client=vip-pads-up&reco_item_pos=1&reco_backend_type=low_level&reco_id=3fc4deea-dc93-46e5-8c6c-b2d10a503674&sid=recos&is_advertising=true&ad_domain=VIPDESKTOP_UP&ad_position=2&ad_click_id=OTc5N2VjNzEtZDJkOC00Zjk2LTgyNzEtMWFhYzI2YTExNDQw" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+
+                        <div class="wishlist-grid">
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_736562-CBT88165132673_072025-F.webp">
+                    <a href="https://www.mercadolibre.com.ar/-libro-para-colorear-libreta-de-dibujo-48-dibujo/p/MLA2022659114#polycard_client=recommendations_vpp-cbt&reco_backend=vpp_cbt_retrieval_system&reco_model=rk_ent_v2_retsys_org_cbt&reco_client=vpp-cbt&reco_item_pos=1&reco_backend_type=low_level&reco_id=a4e6ddc5-bc11-48c5-a824-49078f0d08a2&wid=MLA1525180115&sid=recos" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_788306-MLU72650497085_112023-F.webp">
+                    <a href="https://www.mercadolibre.com.ar/auriculares-inalambricos-aiwa-aw-bt301-blanco/p/MLA19149265?pdp_filters=item_id:MLA1421011197#polycard_client=recommendations_pdp-pads-reviews&reco_backend=recos-pads-retrieval-4stars&wid=MLA1421011197&reco_model=rk_ent_v2_retsys_4stars&reco_client=pdp-pads-reviews&reco_item_pos=1&reco_backend_type=low_level&reco_id=0368c98f-dee1-4b8c-8861-9fed3209c5f9&sid=recos&is_advertising=true&ad_domain=PDPDESKTOP_RECOMMENDED&ad_position=2&ad_click_id=MWMyZTIzZTItYWQxMS00MTFjLWFhYzYtYzc2NTAyNWZkMzE3" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="wishlist-grid">
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_830794-MLA92377684656_092025-F.webp">
+                    <a href="https://articulo.mercadolibre.com.ar/MLA-1511535753-silla-sillon-gamer-ergonomico-reclinable-con-apoya-pies-scp-_JM?searchVariation=189186056587#polycard_client=wishlist" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_669306-MLA93169616203_092025-F.webp">
+                    <a href="https://www.mercadolibre.com.ar/pokemon-tcg-evoluciones-prismaticas-mini-tin-leafeon/up/MLAU3228680717?pdp_filters=item_id%3AMLA2109766642#polycard_client=wishlist&wid=MLA2109766642&sid=bookmarks" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="wishlist-grid">
+
+                <div class="card wish-item">
+                    <img src="https://www.lorealparis-centroamerica.com/-/media/project/loreal/brand-sites/oap/americas/latam/products/hair/hair-care/elseve/extraordinary-oil/extraordinary-oil-curl/hero/imageye___-_elvive-eo-m.jpg?cx=0.48&cy=0.55&cw=650&ch=988&hash=8BAFC97EDE7946BDF57B20342BF0C5A5">
+
+                    <a href="https://www.mercadolibre.com.ar/aceite-oleo-extraordinario-100ml-tratamiento-nutricon-loreal-paris/p/MLA24750853?pdp_filters=price%3A*-33000%7Cdeal%3AMLA1466877-1#polycard_client=search-nordic&search_layout=grid&position=8&type=product&tracking_id=5ecc1536-f788-49d0-b318-1d59b75174a4&wid=MLA1952420802&sid=search" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_923418-MLA70403243135_072023-F.webp">
+
+                    <a href="https://articulo.mercadolibre.com.ar/MLA-1375887529-peluche-hello-kitty-frutilla-_JM#polycard_client=recommendations_pdp-v2p&reco_backend=ranker_retrieval_online_vpp_v2p_rh_2&reco_model=coldstart_low_exposition&reco_client=pdp-v2p&reco_item_pos=7&reco_backend_type=low_level&reco_id=a7fec319-2205-4611-986b-b998fc937c29&wid=MLA1375887529&sid=recos" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="wishlist-grid">
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_846390-MLA79519287045_092024-F.webp">
+
+                    <a href="https://www.mercadolibre.com.ar/delantal-de-cocina-cinnamoroll-hello-kitty-sanrio/up/MLAU1496016341?pdp_filters=item_id%3AMLA1451885511#polycard_client=wishlist&wid=MLA1451885511&sid=bookmarks" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+                <div class="card wish-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_654552-MLA99795373862_122025-F.webp">
+
+                    <a href="https://www.mercadolibre.com.ar/set-cuidado-facial-laikou-sakura-4pcs-con-protector-solar/p/MLA2053901318#polycard_client=recommendations_pdp-v2p&reco_backend=ranker_retrieval_online_vpp_v2p_rh_2&reco_model=coldstart_high_exposition&reco_client=pdp-v2p&reco_item_pos=4&reco_backend_type=low_level&reco_id=e4b9e8b3-cd3c-44f3-9389-200173b9d4f1&wid=MLA2631173144&sid=recos" target="_blank" class="festive-button gold-variant">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- DONATION PAGE -->
+    <div class="container" id="donations-page">
+        <h1 class="title">Donaciones</h1>
+
+        <div class="card">
+            <p>Si querés hacer un pequeño aporte para mi cumple, te dejo mis datos. Gracias por acompañarme siempre 💗</p>
+
+            <div style="margin-top:20px;">
+    <p style="font-size:18px; margin-bottom:10px;">
+        <strong>Alias:</strong> wwowii
+    </p>
+
+    <p style="font-size:18px; margin-bottom:20px;">
+        <strong>CVU:</strong> 0000003100067553540511
+    </p>
+
+    <button class="festive-button gold-variant" onclick="copiarCVU()">
+        Copiar CVU
+    </button>
+    </div>
+</div>
+
+<script>
+function copiarCVU() {
+    const cvu = "0000003100067553540511";
+    navigator.clipboard.writeText(cvu)
+        .then(() => alert("CVU copiado ✨"))
+        .catch(() => alert("No se pudo copiar 😭"));
+}
+</script>
+
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="container" id="contact-page">
+        <h1 class="title">Contacto</h1>
+
+        <div class="card">
+            <p><strong>Email:</strong> victoriacarolinaavaca@gmail.com</p>
+            <p><strong>Teléfono:</strong> +54 9 11 7606 1304</p>
+        </div>
+    </div>
+
+    <footer style="text-align:center; padding:20px; color:#666;">
+        Con amor, vic ♥
+    </footer>
+
+    <!-- NAV SCRIPT -->
+    <script>
+        const navLinks = document.querySelectorAll('.nav-menu a, .festive-button[data-page]');
+        const containers = document.querySelectorAll('.container');
+
+        function showPage(id){
+            containers.forEach(c => c.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+            document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));
+            document.querySelector('.nav-menu a[data-page="'+id+'"]')?.classList.add('active');
+        }
+
+        navLinks.forEach(l => {
+            l.addEventListener('click', e => {
+                e.preventDefault();
+                const id = l.getAttribute('data-page');
+                if(id) showPage(id);
+            });
+        });
+    </script>
+
+    <!-- EMAILJS RSVP -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("cCI6OJjZnGSLTLP7-");  /* <-- REEMPLAZÁ ESTO */
+
+        document.getElementById("rsvpForm").addEventListener("submit", function(e){
+            e.preventDefault();
+
+            emailjs.send("service_acvh2t7", "template_r774m71", { /* <-- REEMPLAZÁ */
+                name: document.getElementById("rsvp-name").value,
+                email: document.getElementById("rsvp-email").value,
+                to_email: "victoriacarolinaavaca@gmail.com"
+            })
+            .then(() => {
+                document.getElementById("rsvp-success").style.display = "block";
+                document.getElementById("rsvpForm").reset();
+            })
+            .catch(() => {
+                alert("Error al enviar el RSVP 😭");
+            });
+        });
+    </script>
+
+</body>
+</html>
